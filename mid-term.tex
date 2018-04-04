@@ -1,0 +1,205 @@
+\documentclass{article}
+\providecommand{\keywords}[1]{\textbf{\textit{Mots cl\'es---}} #1}
+
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\textwidth 17cm
+\textheight 21cm
+\topmargin -1cm
+\oddsidemargin -0.5cm
+%\DefineBibliographyStrings{french}{in={dans},inseries={dans}}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+\newcommand{\reportTitle} {%
+  %\textsc{Graduation Project}
+  \textsc{Projet de Fin d'\'etudes}
+}
+
+\newcommand{\reportAuthor} {%
+  FirstName \textsc{LastName}%
+}
+
+\newcommand{\reportSubject} {%
+  Le titre du rapport \\ Titre%
+}
+
+\newcommand{\dateSoutenance} {%
+  12/06/2018%
+}
+
+\newcommand{\studyDepartment} {%
+  Entreprise d'accueil %Statistique
+}
+
+\newcommand{\ESSAI} {%
+  Higher School of Statistics and Information Analysis
+  %Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
+}
+
+%\newcommand{\codePFE} {% Reference
+%  Code PFE%
+%}
+
+\newcommand{\juryPresident} {%
+  M. Ben Foulen \textsc{Foulenia}%
+}
+\newcommand{\juryPresidentDesc} {%
+  Pr\'esident%
+}
+
+\newcommand{\juryMemberOne} {%
+  Mme Ben Foulena \textsc{Foulen}%
+}
+\newcommand{\juryMemberOneDesc} {%
+  Encadrant %Mentor
+}
+
+\newcommand{\juryMemberTwo} {%
+  M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberTwoDesc} {%
+  Rapporteur% Examiner, Reporter
+}
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add your own commands here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyCommand} {%
+  Does nothing really%
+}
+
+
+% used in maketitle
+\title{\reportSubject}
+\author{\reportAuthor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+\usepackage{graphics}
+\usepackage{graphicx}
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{%
+  \fontsize{9pt}{9pt}\selectfont%
+  \begin{tabular}{c}
+    Tunisian Republic\\
+    Ministry of Higher Education and Scientific Research \\%
+    Carthage University - \ESSAI{}  \\
+  \end{tabular}
+}
+
+\vspace{1cm}
+
+\includegraphics[width=4cm, height=2.5cm]{universite-carthage.jpg}
+
+\includegraphics[width=2.5cm, height=2.5cm]{logo-essai.jpg}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE PAGE CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{30pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{46pt}{46pt}\selectfont%
+  % MEMOIRE\\%
+  %\reportTitle{}%\\\textsc{Report}\\%
+}
+
+\vspace{10pt}
+\textbf{\textit{Graduation Project mid-term Report}}
+
+\vspace{30pt}
+\textbf{\textit{made by}}\\
+\vspace{10pt} {%
+  \fontsize{18pt}{18pt}\selectfont%
+  \textbf{\reportAuthor}\\
+}%
+
+\vspace{10pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{27pt}{27pt}\selectfont%
+  \rule{0.5\textwidth}{.4pt}\\
+  \vspace{10pt}
+  \reportSubject{}\\%
+  \vspace{10pt}
+  \rule{0.5\textwidth}{.4pt}
+}
+
+\vspace{10pt}
+Supervised by:\\
+\vspace{20pt}
+\begin{tabular}{ccc}
+Foulen Faltani &\qquad\qquad & Ines Abdeljaoued Tej \\
+\end{tabular}
+
+\vspace{30pt}%
+\textbf{\textit{A Graduation Project made at}}\\
+
+\vspace{10pt}
+(\studyDepartment)\\
+%\includegraphics[width=4cm, height=2.5cm]{logo-entreprise.jpg}
+\end{center}
+\end{titlepage}
+
+%\maketitle
+
+\tableofcontents
+
+\vspace{6cm}
+
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+\section{Problématique}
+\section{Travail à faire}
+
+\bibliographystyle{apalike}
+\bibliography{Biblio.bib}
+\end{document}
