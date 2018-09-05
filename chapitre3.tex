@@ -1,0 +1,69 @@
+%% @Author: Ines Abdeljaoued Tej
+%  @Date:   2018-06
+%% @Class:  Graduation Project, ESSAI - Carthage University, Tunisia.
+
+
+Exemple d'un algorithme : \\
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+%\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+ 
+\While{While condition}{
+    instructions\;
+    \eIf{condition}{
+        instructions1\;
+        instructions2\;
+    }{
+        instructions3\;
+    }
+}
+\caption{While loop with If/Else condition}\label{algo1}
+\end{algorithm}
+
+
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+%\KwResult{Write here the result}
+\SetKwInOut{Input}{Entrée}\SetKwInOut{Output}{Sortie}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+ 
+$x\leftarrow 0$    \;
+$y\leftarrow 0$    \;
+\BlankLine
+\ForEach{ForEach condition}{    
+    
+    \BlankLine
+    
+    \tcc{comments on code}    
+    \ForEach{ForEach condition}{
+        \If{If condition}{
+            instruction(s) like below: \\
+            increase $x$ by $1$\;
+            decrease $y$ by $2$\;
+        }
+                
+        \BlankLine
+        
+        \uIf{If condition}{
+            instruction
+        }
+        \uElseIf{ElseIf condition}{
+            instruction
+        }
+        \uElse{
+            instruction
+        }                
+    }    
+}
+\caption{Nested ForEach loop with If/ElseIf/Else condition}
+\end{algorithm}

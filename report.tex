@@ -1,11 +1,23 @@
 %% @Author: Ines Abdeljaoued Tej
-%  @Date:   2018-02
+%  @Date:   2018-06
 %% @Class:  Graduation Project, ESSAI - Carthage University, Tunisia.
 
 \documentclass[a4paper, oneside]{report}
+\usepackage[utf8]{inputenc}
 
-\usepackage[nottoc]{tocbibind}
-\addcontentsline{toc}{section}{References}
+\parindent 0cm
+\usepackage{makeidx}
+\makeindex
+
+\usepackage[lined,boxed,commentsnumbered, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{exemple}{Example}[chapter]
+
+
+%\usepackage[nottoc]{tocbibind}
+%\addcontentsline{toc}{section}{References}
 
 \providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
 
@@ -83,7 +95,7 @@
   Ms Ben Foulena \textsc{Foulen}%
 }
 \newcommand{\juryMemberOneDesc} {%
-  Supervisor %Mentor
+  Examiner %Mentor
 }
 
 \newcommand{\juryMemberTwo} {%
@@ -92,6 +104,21 @@
 \newcommand{\juryMemberTwoDesc} {%
   Reviewer% Examiner, Reporter
 }
+
+\newcommand{\juryMemberThree} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberThreeDesc} {%
+	Supervisor% Examiner, Reporter
+}
+
+\newcommand{\juryMemberFour} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberFourDesc} {%
+	Mentor% Examiner, Reporter
+}
+
 
 \newcommand{\specialcell}[1]{%
   \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
@@ -122,6 +149,14 @@
 
 \usepackage{graphics}
 \usepackage{graphicx}
+
+
+\usepackage[acronym,toc,section=chapter]{glossaries}
+\makeglossaries
+
+\newacronym{abc}{ABC}{A contrived acronym}
+\newacronym{efg}{EFG}{Another acronym}
+\newacronym{svm}{SVM}{Support Vector Machines}
 
 \begin{document}
 
@@ -156,14 +191,14 @@
 % THE PAGE CONTENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{30pt} {%
+\vspace{10pt} {%
   \renewcommand*{\familydefault}{\defaultFont}
   \fontsize{46pt}{46pt}\selectfont%
   % MEMOIRE\\%
   %\reportTitle{}%\\\textsc{Report}\\%
 }
 
-\vspace{30pt}
+\vspace{10pt}
 \textbf{\textit{Graduation Project Report submitted in partial fulfillment of}}\\
 \textbf{\textit{the requirements for the degree of}}\\
 
@@ -172,7 +207,7 @@ Engineering Diploma in Statistics and Data Analysis\\
 
 \includegraphics[width=2.5cm, height=2.5cm]{logo-essai.jpg}\\
 
-\vspace{30pt}
+\vspace{10pt}
 \textbf{\textit{Submitted by}}\\
 \vspace{10pt} {%
   \fontsize{18pt}{18pt}\selectfont%
@@ -197,11 +232,11 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
   \juryPresident{} & \juryPresidentDesc{}\\
   \juryMemberOne{} & \juryMemberOneDesc{}\\
   \juryMemberTwo{} & \juryMemberTwoDesc{}\\
+  \juryMemberThree{} & \juryMemberThreeDesc{}\\
+  \juryMemberFour{} & \juryMemberFourDesc{}\\
 \end{tabular}
 
-\vfill
-
-\vspace{30pt}%
+\vspace{10pt}%
 \textbf{\textit{A Graduation Project made at}}\\
 
 \vspace{10pt}
@@ -220,21 +255,22 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
 \cleardoublepage%
 
 \listoffigures
-\addcontentsline{toc}{chapter}{\listfigurename}
+%\addcontentsline{toc}{chapter}{\listfigurename}
 \cleardoublepage%
 
 \listoftables
-\addcontentsline{toc}{chapter}{\listtablename}
+%\addcontentsline{toc}{chapter}{\listtablename}
 \cleardoublepage
 
-%    \printacronyms[heading=chapter*, name=Acronyms]
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\cleardoublepage
+    %\printacronyms[heading=chapter*, name=Acronyms]
     %\printacronyms[heading=chapter*, name=Notations]
+    
 
-    %\addcontentsline{toc}{chapter}{Acronyms}
-    %\addcontentsline{toc}{chapter}{Glossaire ou Notations}
-    \cleardoublepage%
 
-    \sloppy
+    %\sloppy
 
     \pagenumbering{arabic}% 1 2 3 4 5
 %    \doublespacing{}% Double spacing between lines
@@ -258,6 +294,11 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dédicace et Remerciements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+
+%\printglossary[type=abbrev]
+
+
 
 \chapter*{Dedication}
 %\chapter*{D\'edicace}
@@ -267,16 +308,14 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
 %For all they have endured to satisfy all my needs and wishes
 
 \begin{center}
-  Put your dedication lines here ~\\
-  And try to be expressive ;) ~\\
+ {\it 
+	
+A ... pour son(leur) sacrifice et son(leur) soutien, \\
+en témoignage de mon infinie reconnaissance et mon profond attachement \\
+\vspace{1cm}
+A tous ceux qui me sont chers...
 
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ~\\
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ~\\
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ~\\
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ~\\
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non ~\\
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum ~\\
+}
 \end{center}
 %
 %\nopagebreak{%
@@ -293,19 +332,18 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
 %\addcontentsline{toc}{chapter}{Thanks}
 \thispagestyle{empty}
 
-And put your thanks here. \\
+Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes dont la générosité, la bonne humeur et l'intérêt manifestés à l'égard de mon PFE m'ont permis de progresser. \\
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse \cite{caillois1}
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour la confiance qu'il m'a accordée en acceptant d'encadrer ce travail, pour ses multiples conseils et pour toutes les heures qu'il a consacrées à diriger ce travail. \\ 
+
+Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \studyDepartment. Je le remercie également pour son accueil chaleureux à chaque fois que j'ai sollicité son aide, ainsi que pour ses multiples encouragements. J’ai été extrêmement sensible à ses qualités humaines d'écoute et de compréhension tout au long de ce travail de mémoire. \\
+
+J'aimerais également dire à \juryPresident{} à quel point je suis honorée pour avoir accepté de présider ce jury de PFE et pour l’ambiance de travail très agréable qu’il a su créer à l'\ESSAI grâce à sa très grande ouverture d’esprit. \\
+
+Je sais infiniment gré à (Mme, M.) \juryMemberOne{} de s’être rendu disponible, de m’avoir prodigué maints conseils et d’avoir accepté la fonction de rapporteur. De même, je suis particulièrement reconnaissant(e) à (\juryMemberTwo{} de l’intérêt qu’il a manifesté à l’égard de ce projet en s’engageant à être rapporteur. \\
+
+Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. 
 
 
 
@@ -319,103 +357,23 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \markboth{\MakeUppercase{Introduction}}{}%
 \addcontentsline{toc}{chapter}{Introduction}%
 
-%Welcome to \Ac{ESSAI}. ~\\
-%Again, welcome to \Ac{ESSAI}. ~\\
-%Your introduction goes here. ~\\
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore \cite{jenkins2004} et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat \cite{hui}. Duis aute irure dolor in reprehenderit in voluptate v.
-
-
-Voici une référence à l'image de la figure \ref{fig:pictureTwo} page \pageref{fig:pictureTwo} et une autre vers la partie \ref{chapter2} page \pageref{chapter2}.
-On peut citer un livre\, \cite{caillois1} et on précise les détails à la fin du rapport dans la partie références.
-Voici une note\,\footnote{Texte de bas de page} de bas de page\footnote{J'ai bien dit bas de page}.
-
-
-\begin{itemize}
-  \item The individual entries are indicated with a black dot, a so-called bullet.
-  \item The text in the entries may be of any length.
-\end{itemize}
+\input{introduction.tex}
 
 \chapter{Chapter One}%
 \label{chap:chapterone}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SECTION                  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Section One}
-\label{chap:sectionone}
+\input{chapitre1.tex}
 
-\subsection{Sub section One}
+\chapter{Modelling data}
+\label{chap:2}
+\input{chapitre2.tex}
 
-And your chapter one goes here \cite{web001,Nom2012}. \\
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  \begin{figure}[h]%
-    \center%
-    \includegraphics[width=0.3\textwidth]{diamonds.pdf}%
-    \caption[This is a test image]{Test Image}\label{fig:test}%
-  \end{figure}
-
-
-\begin{table}
-\begin{tabular}{cc}
-A & B \\
-C & D
-\end{tabular}
-\caption{Test Table}
-\end{table}
-
- \subsection{Sub section Two}
-
-  This is a second subsection\cite{gen1972}, \cite{schaeffer99}. ~\\
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  \begin{description}\addtolength{\itemsep}{-0.35\baselineskip}%
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-    %
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-    %
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-  \end{description}
-
-  Also bullets such as:%
-  \begin{itemize}\addtolength{\itemsep}{-0.35\baselineskip}%
-    \item One%
-    \item Two%
-    \item Three%
-    \item Four%
-    \item \ldots%
-  \end{itemize}%
-  %
-\subsection{powers series} \label{subsection}
-
-\begin{equation} \label{eq:1}
-\sum_{i=0}^{\infty} a_i x^i
-\end{equation}
-
-The equation \ref{eq:1} is a typical power series.
-
-\chapter*{Autre chapitre}
-\label{chapter2}
+\chapter{Results}
+\label{chap:3}
 \markboth{\MakeUppercase{Autrechap}}{}%
 \addcontentsline{toc}{chapter}{Autre Chapitre}%
+\input{chapitre3.tex}
+
 
 \chapter*{Conclusion}
 \label{chap:conclusion}
@@ -427,20 +385,45 @@ The equation \ref{eq:1} is a typical power series.
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
   consequat.
 
-\chapter*{Appendix}
-\label{chap:appendix}
-\markboth{\MakeUppercase{Appendix}}{}
+\newpage
+\appendix
 \addcontentsline{toc}{chapter}{Appendix}
+%\markboth{\MakeUppercase{Annexe}}{}
 
-  An appendix if you need it. ~\\
+\chapter{Code R pour résoudre la problématique}
+\label{chap:appendix}
 
+
+\section{Pré-traitement des données}
+\section{Code R pour les modèles}
+
+\chapter{Code Python pour résoudre la problématique}
+\label{chap:appendixB}
+\section{Tests avec le package {\tt Numpy}}
+
+ An appedix if you need it.
+ 
+ \begin{verbatim}
+ Insérer ici le code !
+ \end{verbatim}
+
+\section{Librairies utilisées}
+ 
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 
 
+
 \bibliographystyle{apalike}
 \bibliography{Biblio}
+
+\cleardoublepage%
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\printglossaries
+\printindex
 
 \begin{abstract}
 
