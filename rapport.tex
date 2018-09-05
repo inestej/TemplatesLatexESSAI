@@ -1,104 +1,12 @@
 %% @Author: Ines Abdeljaoued Tej
-%  @Date:   2018-02
+%  @Date:   2018-06
 %% @Class:  PFE de l'ESSAI - Universite de Carthage, Tunisie.
 
-\documentclass[a4paper, oneside, frenchb]{report}
+\documentclass[a4paper, oneside, french, 12pt, final]{extreport}
 
-\providecommand{\keywords}[1]{\textbf{\textit{Mots cl\'es---}} #1}
+\input{acronym.tex}
 
-\usepackage[nottoc]{tocbibind}
-
-\usepackage[frenchb]{babel}
-\textwidth 17cm
-\textheight 24cm
-\topmargin -1cm
-\oddsidemargin -0.5cm
-%\DefineBibliographyStrings{french}{in={dans},inseries={dans}}
-
-% set font encoding for PDFLaTeX or XeLaTeX
-\usepackage{ifxetex}
-\ifxetex
-  \usepackage{fontspec}
-\else
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{lmodern}
-\fi
-
-
-\newcommand{\reportTitle} {%
-  %\textsc{Graduation Project}
-  \textsc{Projet de Fin d'\'etudes}
-}
-
-\newcommand{\reportAuthor} {%
-  FirstName \textsc{LastName}%
-}
-
-\newcommand{\reportSubject} {%
-  Le titre du rapport \\ Titre%
-}
-
-\newcommand{\dateSoutenance} {%
-  12/06/2018%
-}
-
-\newcommand{\studyDepartment} {%
-  Entreprise d'accueil %Statistique
-}
-
-\newcommand{\ESSAI} {%
-  %Higher School of Statistics and Information Analysis
-  Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
-}
-
-%\newcommand{\codePFE} {% Reference
-%  Code PFE%
-%}
-
-\newcommand{\juryPresident} {%
-  M. Ben Foulen \textsc{Foulenia}%
-}
-\newcommand{\juryPresidentDesc} {%
-  Pr\'esident%
-}
-
-\newcommand{\juryMemberOne} {%
-  Mme Ben Foulena \textsc{Foulen}%
-}
-\newcommand{\juryMemberOneDesc} {%
-  Encadrant %Mentor
-}
-
-\newcommand{\juryMemberTwo} {%
-  M. Ben Foulen \textsc{Fouleni}%
-}
-\newcommand{\juryMemberTwoDesc} {%
-  Rapporteur% Examiner, Reporter
-}
-
-\newcommand{\specialcell}[1]{%
-  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Add your own commands here
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\MyCommand} {%
-  Does nothing really%
-}
-
-
-% used in maketitle
-\title{\reportSubject}
-\author{\reportAuthor}
-
-% Enable SageTeX to run SageMath code right inside this LaTeX file.
-% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
-%\usepackage{sagetex}
-\usepackage{graphics}
-\usepackage{graphicx}
-
+  
 \begin{document}
 
 \thispagestyle{empty}
@@ -110,50 +18,50 @@
 % THE HEADER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[width=2cm, height=1.5cm]{embleme.jpg}\\
+\includegraphics[scale=0.15]{embleme.jpg}\\
 \vspace{0.5cm}
 
 {%
   \fontsize{9pt}{9pt}\selectfont%
   \begin{tabular}{c}
     R\'epublique Tunisienne \\
-    Minist\`ere de l'Enseignement Supérieur et de la Recherche Scientifique \\%
+    Minist\`ere de l'Enseignement Scientifique et de la Recherche Scientifique \\%
     Universit\'e de Carthage - \ESSAI{}  \\
   \end{tabular}
 }
 
-\vspace{1cm}
+\vspace{0.5cm}
 
-\includegraphics[width=4cm, height=2.5cm]{universite-carthage.jpg}
+\includegraphics[scale=0.3]{universite-carthage.jpg}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % THE PAGE CONTENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{30pt} {%
+\vspace{5pt} {%
   \renewcommand*{\familydefault}{\defaultFont}
   \fontsize{46pt}{46pt}\selectfont%
   % MEMOIRE\\%
   %\reportTitle{}%\\\textsc{Report}\\%
 }
 
-\vspace{10pt}
+\vspace{5pt}
 \textbf{\textit{Rapport de Projet de Fin d'Etudes soumis afin d'obtenir le titre d'}}\\
 
-\vspace{10pt}
+\vspace{5pt}
 Ing\'enieur en Statistique et Analyse de l'Information\\
 
-\includegraphics[width=2.5cm, height=2.5cm]{logo-essai.jpg}\\
+\includegraphics[scale=0.4]{logo-essai.jpg}\\
 
-\vspace{30pt}
+\vspace{5pt}
 \textbf{\textit{par}}\\
 \vspace{10pt} {%
-  \fontsize{18pt}{18pt}\selectfont%
-  \textbf{\reportAuthor}\\
+  \fontsize{14pt}{14pt}\selectfont%
+  {\bfseries\Large\sc \reportAuthor}\\
 }%
 
-\vspace{10pt} {%
+\vspace{5pt} {%
   \renewcommand*{\familydefault}{\defaultFont}
   \fontsize{27pt}{27pt}\selectfont%
   \rule{0.5\textwidth}{.4pt}\\
@@ -163,24 +71,25 @@ Ing\'enieur en Statistique et Analyse de l'Information\\
   \rule{0.5\textwidth}{.4pt}
 }
 
-\vspace{10pt}
-Soutenu le~\dateSoutenance~devant le Jury compos\'e de :\\
+\vspace{5pt}
+Soutenu le\, \dateSoutenance\,\, devant le Jury compos\'e de :\\
 %Soutenu le \dateSoutenance, devant la commission d'examen:\\
-\vspace{20pt}
+\vspace{10pt}
 \begin{tabular}{p{0.3\linewidth} p{0.15\linewidth}}
   \juryPresident{} & \juryPresidentDesc{}\\
   \juryMemberOne{} & \juryMemberOneDesc{}\\
   \juryMemberTwo{} & \juryMemberTwoDesc{}\\
+  \juryMemberThree{} & \juryMemberThreeDesc{}\\
+  \juryMemberFour{} & \juryMemberFourDesc{}\\
 \end{tabular}
 
-\vfill
+%\vfill
 
-\vspace{30pt}%
+\vspace{10pt}%
 \textbf{\textit{Projet de Fin d'Etudes fait \`a}}\\
-
-\vspace{10pt}
+\vspace{5pt}
 (\studyDepartment)\\
-
+%\includegraphics[scale=0.4]{logo-studyDepartment.jpg}
 \end{center}
 \end{titlepage}
 
@@ -209,40 +118,41 @@ Soutenu le~\dateSoutenance~devant le Jury compos\'e de :\\
 %For all they have endured to satisfy all my needs and wishes
 
 \begin{center}
-  Put your dedication lines here ~\\
-  And try to be expressive ;) ~\\
+{\it 
+	
+A ... pour son(leur) sacrifice et son(leur) soutien, \\
+en témoignage de mon infinie reconnaissance et mon profond attachement \\
+\vspace{1cm}
+A tous ceux qui me sont chers...
 
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ~\\
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ~\\
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ~\\
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ~\\
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non ~\\
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum ~\\
+}
 \end{center}
 %
 %\nopagebreak{%
 % And maybe a quote here
 % \raggedright\hspace{5.75cm} To all of you,~\\
+%\raggedright\hspace{7.75cm} I dedicate this work.
+%  \raggedleft\normalfont\large\itshape{} \reportAuthor\par%
+%}
+%
+%\cleardoublepage%
 
 %\chapter*{Thanks}
 \chapter*{Remerciements}
 %\addcontentsline{toc}{chapter}{Thanks}
 \thispagestyle{empty}
 %
-And put your thanks here. ~\\
+%Au terme de ce travail (A l'issue de ce travail), je tiens à remercier M., Mme, Pr., Dr. pour sa disponibilité et ses conseils judicieux. \\
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes dont la générosité, la bonne humeur et l'intérêt manifestés à l'égard de mon PFE m'ont permis de progresser. \\
+
+%En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour la confiance qu'il m'a accordée en acceptant d'encadrer ce travail, pour ses multiples conseils et pour toutes les heures qu'il a consacrées à diriger ce travail. \\ 
+
+%Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \og \studyDepartment \fg. Je le remercie également pour son accueil chaleureux à chaque fois que j'ai sollicité son aide, ainsi que pour ses multiples encouragements. J’ai été extrêmement sensible à ses qualités humaines d'écoute et de compréhension tout au long de ce travail de mémoire. \\
+
+%J'aimerais également dire à \juryPresident{} à quel point je suis honorée pour avoir accepté de présider ce jury de PFE. Je suis infiniment gré à  \juryMemberOne{} de s’être rendu disponible et d’avoir accepté la fonction de rapporteur. De même, je suis particulièrement reconnaissant(e) à (\juryMemberTwo{} de l'intérêt qu'il/elle a manifesté à l'égard de ce projet en s'engageant à être rapporteur. \\
+
+Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. Mes parents... 
 
 
 
@@ -251,111 +161,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \tableofcontents
+%\addcontentsline{toc}{chapter}{\contentsname}
 
-\chapter{Introduction}
+\listoffigures
+%\addcontentsline{toc}{chapter}{Liste des Figures}
+\listoftables
+%\addcontentsline{toc}{chapter}{Liste des Tableaux}
+\listofalgorithms
+\addcontentsline{toc}{chapter}{Liste des algorithmes}
+
+\chapter*{Introduction}
 \label{chap:general_intorduction}
-\markboth{\MakeUppercase{Introduction}}{}%
-\addcontentsline{toc}{chapter}{Introduction}%
-
-%Welcome to \Ac{ESSAI}. ~\\
-%Again, welcome to \Ac{ESSAI}. ~\\
-%Your introduction goes here. ~\\
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore \cite{jenkins2004} et dolore magna aliqua. Ut enim ad minim veniam, du chapitre \ref{chap:general_intorduction}
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat \cite{hui}. Duis aute irure dolor in reprehenderit in voluptate v.
+\input{introduction.tex}
 
 
-Voici une référence à l'image de la figure \ref{fig:pictureTwo} page \pageref{fig:pictureTwo} et une autre vers la partie \ref{chapter2} page \pageref{chapter2}.
-On peut citer un livre\, \cite{caillois1} et on précise les détails à la fin du rapport dans la partie références.
-Voici une note\,\footnote{Texte de bas de page} de bas de page\footnote{J'ai bien dit bas de page}.
-
-
-\begin{itemize}
-  \item The individual entries are indicated with a black dot, a so-called bullet.
-  \item The text in the entries may be of any length.
-\end{itemize}
-
-\chapter{Chapitre Un}%
+\chapter{Données étudiés}%
 \label{chap:chapterone}
+\input{chapitre1.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SECTION                  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Section une}
-\label{chap:sectionone}
+\chapter{Modèles utilisés et Applications}
+\label{chap:2}
+\input{chapitre2.tex}
 
-\subsection{Sub section One}
+\chapter{Indicateurs de performances et Résultats}
+\label{chap:3}
+\input{chapitre3.tex}
 
-And your chapter one goes here \cite{web001,Nom2012}. \\
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  \begin{figure}[h]%
-    \center%
-    \includegraphics[width=0.3\textwidth]{diamonds.pdf}
-    \caption[This is a test image]{Test Image}\label{fig:test}%
-  \end{figure}
-
-
-\begin{table}
-\begin{tabular}{cc}
-A & B \\
-C & D
-\end{tabular}
-\caption{Test Table}
-\end{table}
-
- \subsection{Sub section Two}
-
-  This is a second subsection\cite{gen1972}, \cite{schaeffer99}. ~\\
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  \begin{description}\addtolength{\itemsep}{-0.35\baselineskip}%
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-    %
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-    %
-    \item[\textbullet~\bfseries Menu Item] \hfill \\%
-      Menu Description.~\\%
-      {\textbf{Focus topics:~}\emph{Topic one, topic two, topic three, ...}}%
-  \end{description}
-
-  Also bullets such as:%
-  \begin{itemize}\addtolength{\itemsep}{-0.35\baselineskip}%
-    \item One%
-    \item Two%
-    \item Three%
-    \item Four%
-    \item \ldots%
-  \end{itemize}%
-  %
-\subsection{powers series} \label{subsection}
-
-\begin{equation} \label{eq:1}
-\sum_{i=0}^{\infty} a_i x^i
-\end{equation}
-
-The equation \ref{eq:1} is a typical power series.
-
-\chapter*{Autre chapitre}
-\label{chapter2}
-\markboth{\MakeUppercase{Autrechap}}{}%
-\addcontentsline{toc}{chapter}{Autre Chapitre}%
-
-\chapter*{Conclusion}
+\chapter*{Conclusion et Perspectives}
 \label{chap:conclusion}
 \markboth{\MakeUppercase{Conclusion}}{}%
 \addcontentsline{toc}{chapter}{Conclusion}
@@ -365,13 +197,26 @@ The equation \ref{eq:1} is a typical power series.
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
   consequat.
 
-\chapter*{Annexe}
+\newpage
+\appendix
+\addcontentsline{toc}{chapter}{Annexes}
+%\markboth{\MakeUppercase{Annexe}}{}
+
+\chapter{Code R pour résoudre la problématique}
 \label{chap:appendix}
-\markboth{\MakeUppercase{Annexe}}{}
-\addcontentsline{toc}{chapter}{Annexe}
 
-  An appedix if you need it. ~\\
 
+\section{Pré-traitement des données}
+\section{Code R pour les modèles}
+
+ An appedix if you need it.
+ 
+ \begin{verbatim}
+ Insérer ici le code !
+ \end{verbatim}
+
+\section{Librairies utilisées}
+ 
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
@@ -404,14 +249,15 @@ The equation \ref{eq:1} is a typical power series.
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
 
-%\newpage
+\printglossaries
+\printindex
 
+\newpage
 \begin{abstract}
-Insérer un résumé en Français \\
-
-\keywords{Ici mettre cinq mots clés}
+	Insérer un résumé en Français \\
+	
+	\keywords{Ici, Mettre, Cinq, Mots, Clés.}
 \end{abstract}
-
 
 
 \end{document}
