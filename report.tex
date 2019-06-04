@@ -2,7 +2,7 @@
 %  @Date:   2018-06
 %% @Class:  Graduation Project, ESSAI - Carthage University, Tunisia.
 
-\documentclass[a4paper, oneside]{report}
+\documentclass[a4paper, oneside, french, 12pt, final]{extreport}
 \usepackage[utf8]{inputenc}
 
 \parindent 0cm
@@ -158,6 +158,7 @@
 \newacronym{efg}{EFG}{Another acronym}
 \newacronym{svm}{SVM}{Support Vector Machines}
 
+\pagenumbering{roman}
 \begin{document}
 
 \thispagestyle{empty}
@@ -250,32 +251,6 @@ Defended on~\dateSoutenance~ in front of the committee composed of:\\
 % Table des matières, figures, tableaux ; Glossaire
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tableofcontents
-\addcontentsline{toc}{chapter}{\contentsname}
-\cleardoublepage%
-
-\listoffigures
-%\addcontentsline{toc}{chapter}{\listfigurename}
-\cleardoublepage%
-
-\listoftables
-%\addcontentsline{toc}{chapter}{\listtablename}
-\cleardoublepage
-
-\listofalgorithms
-\addcontentsline{toc}{chapter}{List of Algorithms}
-\cleardoublepage
-    %\printacronyms[heading=chapter*, name=Acronyms]
-    %\printacronyms[heading=chapter*, name=Notations]
-    
-
-
-    %\sloppy
-
-    \pagenumbering{arabic}% 1 2 3 4 5
-%    \doublespacing{}% Double spacing between lines
-
-    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 
 % ###############################
@@ -332,30 +307,48 @@ A tous ceux qui me sont chers...
 %\addcontentsline{toc}{chapter}{Thanks}
 \thispagestyle{empty}
 
-Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes dont la générosité, la bonne humeur et l'intérêt manifestés à l'égard de mon PFE m'ont permis de progresser. \\
-
-
-En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour la confiance qu'il m'a accordée en acceptant d'encadrer ce travail, pour ses multiples conseils et pour toutes les heures qu'il a consacrées à diriger ce travail. \\ 
-
-Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \studyDepartment. Je le remercie également pour son accueil chaleureux à chaque fois que j'ai sollicité son aide, ainsi que pour ses multiples encouragements. J’ai été extrêmement sensible à ses qualités humaines d'écoute et de compréhension tout au long de ce travail de mémoire. \\
-
-J'aimerais également dire à \juryPresident{} à quel point je suis honorée pour avoir accepté de présider ce jury de PFE et pour l’ambiance de travail très agréable qu’il a su créer à l'\ESSAI grâce à sa très grande ouverture d’esprit. \\
-
-Je sais infiniment gré à (Mme, M.) \juryMemberOne{} de s’être rendu disponible, de m’avoir prodigué maints conseils et d’avoir accepté la fonction de rapporteur. De même, je suis particulièrement reconnaissant(e) à (\juryMemberTwo{} de l’intérêt qu’il a manifesté à l’égard de ce projet en s’engageant à être rapporteur. \\
+Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes ... En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour . Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \studyDepartment. Je le remercie également pour son accueil... J'aimerais également dire à \juryPresident{} à quel point je suis honorée. Je suis infiniment gré à (Mme, M.) \juryMemberOne{} de s’être rendu(e) disponible, je suis particulièrement reconnaissant(e) à \juryMemberTwo{} de l’intérêt qu’il a manifesté à l’égard de ce projet en s’engageant à être rapporteur. \\
 
 Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. 
 
+\tableofcontents
+\addcontentsline{toc}{chapter}{\contentsname}
+\cleardoublepage%
+
+\listoffigures
+%\addcontentsline{toc}{chapter}{\listfigurename}
+\cleardoublepage%
+
+\listoftables
+%\addcontentsline{toc}{chapter}{\listtablename}
+\cleardoublepage
+
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\cleardoublepage
+    %\printacronyms[heading=chapter*, name=Acronyms]
+    %\printacronyms[heading=chapter*, name=Notations]
+    
+
+
+    %\sloppy
+
+    \pagenumbering{arabic}% 1 2 3 4 5
+%    \doublespacing{}% Double spacing between lines
+
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Divers chapitres
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagenumbering{arabic}
 
 \chapter*{Introduction}
 \label{chap:general_intorduction}
 \markboth{\MakeUppercase{Introduction}}{}%
-\addcontentsline{toc}{chapter}{Introduction}%
+%\addcontentsline{toc}{chapter}{Introduction}%
 
 \input{introduction.tex}
 

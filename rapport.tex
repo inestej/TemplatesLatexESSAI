@@ -6,9 +6,9 @@
 
 \input{acronym.tex}
 
+\pagenumbering{roman}
   
 \begin{document}
-
 \thispagestyle{empty}
 \begin{titlepage}
 \begin{center}
@@ -32,7 +32,7 @@
 
 \vspace{0.5cm}
 
-\includegraphics[scale=0.3]{universite-carthage.jpg}
+\includegraphics[scale=0.04]{universite-carthage.jpg}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +80,7 @@ Soutenu le\, \dateSoutenance\,\, devant le Jury compos\'e de :\\
   \juryMemberOne{} & \juryMemberOneDesc{}\\
   \juryMemberTwo{} & \juryMemberTwoDesc{}\\
   \juryMemberThree{} & \juryMemberThreeDesc{}\\
-  \juryMemberFour{} & \juryMemberFourDesc{}\\
+%  \juryMemberFour{} & \juryMemberFourDesc{}\\
 \end{tabular}
 
 %\vfill
@@ -170,6 +170,8 @@ Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien a
 \listofalgorithms
 \addcontentsline{toc}{chapter}{Liste des algorithmes}
 
+\newpage
+\pagenumbering{arabic}
 \chapter*{Introduction}
 \label{chap:general_intorduction}
 \input{introduction.tex}
