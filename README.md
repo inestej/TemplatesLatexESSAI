@@ -11,23 +11,23 @@ mi-parcours.tex et rapport.tex dans ESSAI_Latex_fr pour la version française
 mi-report.tex et report.tex dans ESSAI_Latex_en pour la version anglaise
 Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et dans un cloud comme cocalc.com.
 
-2ème semaine : Rédiger le fichier introduction.tex, en prenant soin de préciser la problématique et les données à manipuler. Imaginer le fichier conclusion.tex qui donne un diagramme de Gantt du travail à faire.
+2ème semaine : Rédiger le fichier introduction.tex, en prenant soin de préciser la problématique et les données à manipuler. Imaginer le fichier conclusion.tex qui donne un diagramme de Gantt du travail à faire. Durant ces deux premières semaines, il est indipensable de définir une ligne de la base de données et d'être capable de l'expliquer le plus clairement possible (taille, quanti, quali, observations, données temporelles et spatiales, variables à expliquer). 
 
-4ème semaine : Ecrire les principaux algorithmes à utiliser. Remplir le fichier chapitre1.tex avec les algorithmes et les bonnes références. 
+4ème semaine : Ecrire les principaux algorithmes à utiliser. Remplir le fichier chapitre1.tex avec les algorithmes et les bonnes références. A ce stade, on est capable de dire quelles méthodes seront développées (ML, DL, classification supervisée ou pas, séries temporelles, données statiques, mémoire). 
 
-6ème semaine : Donner un premier aperçu des outils à utiliser. Les librairies sur R ou sur Python doivent être bien citées dans Biblio.bib et dans le corps du document chapitre1.tex ou chapitre2.tex
+6ème semaine : Donner un premier aperçu des outils à utiliser. Les librairies sur R ou sur Python doivent être bien citées dans Biblio.bib et dans le corps du document chapitre1.tex ou chapitre2.tex. Les chapitres soivent être équilibrés : le contexte général, la problématique, les définitions théoriques des mesures de comparaison ou de validation dans le premier chapitre. Les méthods, les algorithmes, les choix jusitifiés de telle approche en dépit d'une autre, l'optimisation des paramètres). 
 
 7ème semaine : Avancement du travail. Chaque séance de travail doit être précédée par un envoi d'un email avec la dernière version du rapport de mi-parcours, dûment documenté. 
 
-8ème semaine : Déposer le rapport de mi-parcours. Les références bibliographiques doivent être bien fournies. La méthodologie à suivre arrêtée.
+8ème semaine : Déposer le rapport de mi-parcours. Les références bibliographiques doivent être bien fournies. La méthodologie à suivre arrêtée. Exlpliquer les choix entrepris (par exemple Power BI versus SQlite, R versus Python, Dash versus Rshiny, GLM versus HMM).
 
-12ème semaine : Avancement dans la solution. Rédaction des fichiers chapitre2.tex et chapitre3.tex. Jury à fixer.
+12ème semaine : Avancement dans la solution. Rédaction des fichiers chapitre2.tex et chapitre3.tex. Jury à fixer. Simulations, optimisation des paramètres, consolidation de la classification, validation de la prévision. 
 
 16ème semaine : Avancement dans la rédaction de tous les fichiers du rapport.tex (ou de report.tex) et finalisation de la solution (valider le modèle). 
 
-18ème semaine : Prévoir une pré-soutenance et au moins une rencontre avec l'encadrant entreprise.
+18ème semaine : Prévoir une pré-soutenance et une rencontre avec l'encadrant entreprise. L'avis de ce dernier est indispensable pour l'autorisation de soutenance. 
 
-20ème semaine : Dépôt du rapport final. Préparation de la soutenance. 
+20ème semaine : Dépôt du rapport final. Préparation de la soutenance. Introduire la base (une ligne de la base comprend...), expliquer le problème (classification, prévision, estimation de coût), proposer des méthodes (diagrammes, algos, justifier par la bibliographie le choix fait), présenter les résultats, revenir à la problématique métier (business is business), perspectives. Les slides ne doivent pas contenir de fautes de frappes !
 
 
 
