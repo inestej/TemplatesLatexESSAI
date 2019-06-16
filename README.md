@@ -21,7 +21,7 @@ Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et 
 
 8ème semaine : Déposer le rapport de mi-parcours. Les références bibliographiques doivent être bien fournies. La méthodologie à suivre arrêtée. Exlpliquer les choix entrepris (par exemple Power BI versus SQlite, R versus Python, Dash versus Rshiny, GLM versus HMM).
 
-12ème semaine : Avancement dans la solution. Rédaction des fichiers chapitre2.tex et chapitre3.tex. Jury à fixer. Simulations, optimisation des paramètres, consolidation de la classification, validation de la prévision. 
+12ème semaine : Avancement dans la solution. Rédaction des fichiers chapitre2.tex et chapitre3.tex. Jury à fixer. Simulations, optimisation des paramètres, consolidation de la classification, validation de la prévision. Besoin à ce stade d'un mind map pour illustrer tous les choix. Ce mind map peut être réalisé par Freemind par exemple. Les diagrmmes peuvent être rendu avec draw.io. 
 
 16ème semaine : Avancement dans la rédaction de tous les fichiers du rapport.tex (ou de report.tex) et finalisation de la solution (valider le modèle). 
 
