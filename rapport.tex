@@ -3,11 +3,162 @@
 %% @Class:  PFE de l'ESSAI - Universite de Carthage, Tunisie.
 
 \documentclass[a4paper, oneside, french, 12pt, final]{extreport}
+\usepackage{graphicx}
 
-\input{acronym.tex}
+\parindent 0cm
+\usepackage{makeidx}
+\makeindex
 
-\pagenumbering{roman}
-  
+\usepackage[lined,boxed,commentsnumbered, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{exemple}{Example}[chapter]
+
+
+%\usepackage[nottoc]{tocbibind}
+%\addcontentsline{toc}{section}{References}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+
+\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\thebibliography}{%
+%  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}%{\MakeUppercase\bibname}}{%
+%  \section{References}}{}{}
+%\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind}
+
+\textwidth 18cm
+\textheight 24cm
+\topmargin -0.5cm
+\oddsidemargin -1cm
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+
+\newcommand{\reportTitle} {%
+  \textsc{Graduation Project Report}
+  %\textsc{Projet de Fin d'\'etudes}
+}
+
+\newcommand{\reportAuthor} {%
+  FirstName \textsc{LastName}%
+}
+
+\newcommand{\reportSubject} {%
+  My very attractive \\ Title%
+}
+
+\newcommand{\dateSoutenance} {%
+  12/06/2018%
+}
+
+\newcommand{\studyDepartment} {%
+  Entreprise d'accueil %Statistique
+}
+
+\newcommand{\ESSAI} {%
+  Higher School of Statistics and Information Analysis
+  %Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
+}
+
+%\newcommand{\codePFE} {% Reference
+%  Code PFE%
+%}
+
+\newcommand{\juryPresident} {%
+  Mr Ben Foulen \textsc{Foulenia}%
+}
+\newcommand{\juryPresidentDesc} {%
+  President%
+}
+
+\newcommand{\juryMemberOne} {%
+  Ms Ben Foulena \textsc{Foulen}%
+}
+\newcommand{\juryMemberOneDesc} {%
+  Examiner %Mentor
+}
+
+\newcommand{\juryMemberTwo} {%
+  Mr Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberTwoDesc} {%
+  Reviewer% Examiner, Reporter
+}
+
+\newcommand{\juryMemberThree} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberThreeDesc} {%
+	Supervisor% Examiner, Reporter
+}
+
+\newcommand{\juryMemberFour} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberFourDesc} {%
+	Mentor% Examiner, Reporter
+}
+
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add your own commands here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyCommand} {%
+  Does nothing really%
+}
+
+
+% used in maketitle
+\title{\reportSubject}
+\author{\reportAuthor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+%\hypersetup{
+%  pdftitle={\reportTitle~-~\reportSubject},%
+%  pdfauthor={\reportAuthor},%
+%  pdfsubject={\reportSubject},%
+%  pdfkeywords={report} {internship} {pfe} {enis}
+%}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+
+
+\usepackage[acronym,toc,section=chapter]{glossaries}
+\makeglossaries
+
+\newacronym{abc}{ABC}{A contrived acronym}
+\newacronym{efg}{EFG}{Another acronym}
+\newacronym{svm}{SVM}{Support Vector Machines}
+
+\pagenumbering{roman} 
 \begin{document}
 \thispagestyle{empty}
 \begin{titlepage}
@@ -18,7 +169,7 @@
 % THE HEADER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includegraphics[scale=0.15]{embleme.jpg}\\
+\includegraphics[scale=0.15]{embleme.jpg}
 \vspace{0.5cm}
 
 {%
@@ -26,7 +177,7 @@
   \begin{tabular}{c}
     R\'epublique Tunisienne \\
     Minist\`ere de l'Enseignement Scientifique et de la Recherche Scientifique \\%
-    Universit\'e de Carthage - \ESSAI{}  \\
+    Universit\'e de Carthage - \ESSAI{}\\ 
   \end{tabular}
 }
 
