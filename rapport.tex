@@ -2,14 +2,14 @@
 %  @Date:   2018-06
 %% @Class:  PFE de l'ESSAI - Universite de Carthage, Tunisie.
 
-\documentclass[a4paper, oneside, french, 12pt, final]{extreport}
+\documentclass[a4paper, oneside, 12pt, final]{extreport}
 \usepackage{graphicx}
 
 \parindent 0cm
 \usepackage{makeidx}
 \makeindex
 
-\usepackage[lined,boxed,commentsnumbered, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[lined,boxed,commentsnumbered, french, ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{definition}{Definition}[chapter]
@@ -20,6 +20,7 @@
 %\addcontentsline{toc}{section}{References}
 
 \providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
 
 \usepackage{etoolbox}
 %\makeatletter
@@ -28,8 +29,7 @@
 %  \section{References}}{}{}
 %\makeatother
 
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+
 
 \usepackage[nottoc]{tocbibind}
 
@@ -159,6 +159,10 @@
 \newacronym{svm}{SVM}{Support Vector Machines}
 
 \pagenumbering{roman} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
 \begin{document}
 \thispagestyle{empty}
 \begin{titlepage}
@@ -308,7 +312,7 @@ Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le sou
 Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. Mes parents... 
 
 
-
+\input{abstract.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Divers chapitres
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -322,6 +326,7 @@ Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien a
 %\addcontentsline{toc}{chapter}{Liste des Tableaux}
 \listofalgorithms
 \addcontentsline{toc}{chapter}{Liste des algorithmes}
+\cleardoublepage
 
 \newpage
 \pagenumbering{arabic}
@@ -398,6 +403,8 @@ Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien a
 %\printbibliography[keyword=jeu,heading=subbibliography,title={\emph{Games studies}}]
 
 \bibliographystyle{apalike}
+%\bibliographystyle{plain}
+
 \bibliography{Biblio.bib}
 
 \cleardoublepage%
@@ -407,12 +414,7 @@ Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien a
 \printglossaries
 \printindex
 
-\newpage
-\begin{abstract}
-	Insérer un résumé en Français \\
-	
-	\keywords{Ici, Mettre, Cinq, Mots, Clés.}
-\end{abstract}
+\input{abstract}
 
 
 \end{document}

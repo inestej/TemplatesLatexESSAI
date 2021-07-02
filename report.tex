@@ -2,7 +2,7 @@
 %  @Date:   2018-06
 %% @Class:  Graduation Project, ESSAI - Carthage University, Tunisia.
 
-\documentclass[a4paper, oneside, french, 12pt, final]{extreport}
+\documentclass[a4paper, oneside, english, 12pt, final]{extreport}
 \usepackage[utf8]{inputenc}
 
 \parindent 0cm
@@ -19,7 +19,8 @@
 %\usepackage[nottoc]{tocbibind}
 %\addcontentsline{toc}{section}{References}
 
-\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
 
 \usepackage{etoolbox}
 %\makeatletter
@@ -309,7 +310,9 @@ A tous ceux qui me sont chers...
 
 I could never have realized this project without the precious help and support of many people ... First, I would like to thank my academic supervisor, \juryMemberFour{}, for . I would like to express my gratitude to \juryMemberThree{}, for giving me the desire to do a thesis on ... within \studyDepartment. I also thank him for his welcome... I would also like to say to jury president how honored I am. I am very grateful to (Ms., Mr.) \juryMemberOne{} for making himself/herself available, I am especially grateful to \juryMemberTwo{} for the interest he/she has shown in this project by committing to be a reporter. \\
 
-My gratitude goes to those who have provided emotional support for this work: my family and friends. 
+My gratitude goes to those who have provided emotional support for this work: my family and friends.  
+
+\input{abstract.tex}
 
 \tableofcontents
 \addcontentsline{toc}{chapter}{\contentsname}
@@ -383,18 +386,12 @@ My gratitude goes to those who have provided emotional support for this work: my
 \addcontentsline{toc}{chapter}{Appendix}
 %\markboth{\MakeUppercase{Annexe}}{}
 
-\chapter{Code R pour résoudre la problématique}
+\chapter{Code R/Python pour résoudre la problématique}
 \label{chap:appendix}
 
 
 \section{Pré-traitement des données}
 \section{Code R pour les modèles}
-
-\chapter{Code Python pour résoudre la problématique}
-\label{chap:appendixB}
-\section{Tests avec le package {\tt Numpy}}
-
- An appedix if you need it.
  
  \begin{verbatim}
  Insérer ici le code !
@@ -409,6 +406,8 @@ My gratitude goes to those who have provided emotional support for this work: my
 
 
 \bibliographystyle{apalike}
+%\bibliographystyle{plain}
+
 \bibliography{Biblio}
 
 \cleardoublepage%
@@ -418,11 +417,6 @@ My gratitude goes to those who have provided emotional support for this work: my
 \printglossaries
 \printindex
 
-\begin{abstract}
-
-Put here an absract for the report; \\
-
-\keywords{Insert 5 keywords}
-\end{abstract}
+\input{abstract}
 
 \end{document}
