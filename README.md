@@ -23,7 +23,7 @@ Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et 
 
 12ème semaine : Avancement dans la solution. Rédaction des fichiers chapitre2.tex et chapitre3.tex. Jury à fixer. Simulations, optimisation des paramètres, consolidation de la classification, validation de la prévision. Besoin à ce stade d'un mind map pour illustrer tous les choix. Ce mind map peut être réalisé par Freemind par exemple. Les diagrmmes peuvent être rendu avec draw.io. 
 
-16ème semaine : Avancement dans la rédaction de tous les fichiers du rapport.tex (ou de report.tex) et finalisation de la solution (valider le modèle). 
+16ème semaine : Avancement dans la rédaction de tous les fichiers du rapport.tex (ou de report.tex) et finalisation de la solution (valider le modèle). L'introduction générale comprend les détails de la problématique, la démarche à suivre, les références des travaux qui ont inspiré le projet... Chaque chapitre doit comprendre un paragraphe introductif et une conclusion. La conclusion reprend les principaux résultats et une petite discussion. 
 
 18ème semaine : Prévoir une pré-soutenance et une rencontre avec l'encadrant entreprise. L'avis de ce dernier est indispensable pour l'autorisation de soutenance. 
 
