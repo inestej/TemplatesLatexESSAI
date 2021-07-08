@@ -7,8 +7,8 @@ Il y a deux lieux de réunion : à l'ESSAI au Bureau 3.2, et au Laboratoire BIM
 1ère semaine : Discussion du sujet et prise en main de l'outil collaboratif de rédaction.
 Créer un compte sur cocalc.com et sur overleaf (ou sharelatex)
 Récupérer le template Latex qui sera utilisé. Il y a deux fichiers :
-mi-parcours.tex et rapport.tex dans ESSAI_Latex_fr pour la version française
-mid-term.tex et report.tex dans ESSAI_Latex_en pour la version anglaise
+[mi-parcours.tex](http://github.com/inestej/TemplatesLatexESSAI/mi-parcours.tex) et rapport.tex pour la version française
+mid-term.tex et report.tex pour la version anglaise
 Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et dans un cloud comme cocalc.com.
 
 2ème semaine : Rédiger le fichier introduction.tex, en prenant soin de préciser la problématique et les données à manipuler. Imaginer le fichier conclusion.tex qui donne un diagramme de Gantt du travail à faire. Durant ces deux premières semaines, il est indipensable de définir une ligne de la base de données et d'être capable de l'expliquer le plus clairement possible (taille, quanti, quali, observations, données temporelles et spatiales, variables à expliquer). 
