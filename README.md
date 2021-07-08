@@ -7,7 +7,7 @@ Il y a deux lieux de réunion : à l'ESSAI au Bureau 3.2, et au Laboratoire BIM
 1ère semaine : Discussion du sujet et prise en main de l'outil collaboratif de rédaction.
 Créer un compte sur cocalc.com et sur overleaf (ou sharelatex)
 Récupérer le template Latex qui sera utilisé. Il y a deux fichiers :
-[mi-parcours.tex](http://github.com/inestej/TemplatesLatexESSAI/mi-parcours.tex) et rapport.tex pour la version française
+[mi-parcours.tex](https://github.com/inestej/TemplatesLatexESSAI/blob/master/mi-parcours.tex) et rapport.tex pour la version française
 mid-term.tex et report.tex pour la version anglaise
 Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et dans un cloud comme cocalc.com.
 
