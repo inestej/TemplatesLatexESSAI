@@ -1,7 +1,8 @@
 # TemplatesLatexESSAI
-Un rapport Latex pour les PFE (en anglais et en Français) destiné à l'ESSAI, Université de Carthage, Tunisie. Ci-dessous le déroulement de l'encadrement du PFE.
+Ce templates contient un rapport Latex pour les PFE (en anglais et en Français) destiné aux élèves-ingénieurs de l'ESSAI, Université de Carthage, Tunisie. Ce rapport est également disponible sur [Overleaf](https://www.overleaf.com/latex/templates/templates-latex-essai/pmfvkkwkkcrc). 
 
-Il y a deux lieux de réunion : à l'ESSAI au Bureau 3.2, et au Laboratoire BIMS à l'Institut Pasteur de Tunis. Les dates des réunions seront confirmées la veille. 
+
+Ci-dessous le déroulement de l'encadrement du PFE. Il y a deux lieux de réunion : à l'ESSAI au Bureau 3.2, et au Laboratoire BIMS à l'Institut Pasteur de Tunis. Les dates des réunions seront confirmées la veille. 
 
 
 1ère semaine : Discussion du sujet et prise en main de l'outil collaboratif de rédaction.
