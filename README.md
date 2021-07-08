@@ -17,7 +17,7 @@ Sauvegarder systématiquement son travail dans une clé USB ou un DD externe et 
 
 6ème semaine : Donner un premier aperçu des outils à utiliser. Les librairies sur R ou sur Python doivent être bien citées dans Biblio.bib et dans le corps du document chapitre1.tex ou chapitre2.tex. Les chapitres soivent être équilibrés : le contexte général, la problématique, les définitions théoriques des mesures de comparaison ou de validation dans le premier chapitre. Les méthods, les algorithmes, les choix jusitifiés de telle approche en dépit d'une autre, l'optimisation des paramètres). 
 
-7ème semaine : Avancement du travail. Chaque séance de travail doit être précédée par un envoi d'un email avec la dernière version du rapport de mi-parcours, dûment documenté. 
+7ème semaine : Avancement du travail. Chaque séance de travail doit être précédée par un envoi d'un email avec la dernière version du rapport de mi-parcours, dûment documenté. Penser à insérer des flowshart pour la problématique et le pipeline.
 
 8ème semaine : Déposer le rapport de mi-parcours. Les références bibliographiques doivent être bien fournies. La méthodologie à suivre arrêtée. Exlpliquer les choix entrepris (par exemple Power BI versus SQlite, R versus Python, Dash versus Rshiny, GLM versus HMM).
 
